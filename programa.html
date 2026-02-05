@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Académico | Seguridad e Higiene</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+                    colors: {
+                        brandOrange: '#E67E22',
+                        brandBlue: '#3F51B5',
+                        brandBg: '#F8FAFC',
+                    },
+                    borderRadius: { 'brand': '30px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        .table-gradient-header {
+            background: linear-gradient(90deg, #3F51B5 0%, #E67E22 100%);
+        }
+        .hero-pattern {
+            background-color: #3F51B5;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-brandBg text-slate-800 antialiased font-sans">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <img src="https://jerarquicos.com/wp-content/uploads/2024/01/jerarquicos-logo.svg" alt="Jerárquicos" class="h-7 md:h-9">
+            <img src="https://superior.cejs.edu.ar/wp-content/instituto/images/logo_instituto_fundacion.jpg" alt="Instituto" class="h-8 md:h-10 rounded shadow-sm">
+        </div>
+    </nav>
+
+    <section class="relative pt-40 pb-20 hero-pattern text-white rounded-b-[50px] md:rounded-b-[80px] shadow-xl overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <span class="inline-block bg-brandOrange text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 shadow-lg">
+                Plan de Estudios Vigente
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight uppercase">
+                Programa académico de <br>
+                <span class="text-brandOrange">Seguridad e Higiene</span>
+            </h1>
+            <div class="h-2 w-24 bg-white mx-auto rounded-full"></div>
+        </div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+    </section>
+
+    <section class="py-12 px-6 max-w-7xl mx-auto -mt-10 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 md:p-10 rounded-brand shadow-lg border-t-4 border-brandOrange">
+                <div class="flex items-center gap-4 mb-6 text-brandBlue">
+                    <i data-lucide="target" class="w-8 h-8"></i>
+                    <h2 class="text-xl font-extrabold uppercase tracking-tight">Objetivo de la carrera</h2>
+                </div>
+                <p class="text-slate-600 leading-relaxed font-medium">Formar profesionales altamente capacitados en el diseño de métodos y espacios de trabajo seguros y saludables, evitando la ocurrencia de siniestros y la generación de enfermedades profesionales. Propiciar una visión integral para abordar problemas de Seguridad, Higiene ocupacional y Medio Ambiente en ámbitos públicos o privados.</p>
+            </div>
+            <div class="bg-white p-8 md:p-10 rounded-brand shadow-lg border-t-4 border-brandBlue">
+                <div class="flex items-center gap-4 mb-6 text-brandBlue">
+                    <i data-lucide="user-check" class="w-8 h-8"></i>
+                    <h2 class="text-xl font-extrabold uppercase tracking-tight">Perfil profesional</h2>
+                </div>
+                <p class="text-slate-600 leading-relaxed font-medium">El Técnico estará formado para diagnosticar y prevenir riesgos en organizaciones (Industrias, Minería, Pymes), coordinar capacitaciones, realizar auditorías y pericias judiciales, e investigar accidentes para salvaguardar la salud psicofísica del trabajador.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 max-w-7xl mx-auto">
+        
+        <div class="mb-20">
+            <h3 class="text-2xl font-black text-brandBlue mb-8 flex items-center gap-3">
+                <span class="bg-brandBlue text-white w-10 h-10 rounded-xl flex items-center justify-center text-sm shadow-lg">01</span>
+                PRIMER AÑO
+            </h3>
+            <div class="overflow-hidden rounded-3xl shadow-xl bg-white border border-slate-100">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="table-gradient-header text-white">
+                            <th class="p-5 font-bold uppercase text-xs tracking-widest">Materia</th>
+                            <th class="p-5 font-bold uppercase text-xs tracking-widest text-center">Cursado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr> <td class="p-5 font-bold text-slate-700">Física</td> <td class="p-5 text-center text-slate-500 text-sm italic font-medium">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Química</td> <td class="p-5 text-center text-slate-500 text-sm italic font-medium">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Ecología y Medio Ambiente</td> <td class="p-5 text-center text-slate-500 text-sm italic font-medium">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Elementos de Matemática y Estadística</td> <td class="p-5 text-center text-slate-500 text-sm italic font-medium">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Técnicas de Comunicación</td> <td class="p-5 text-center text-slate-500 text-sm italic font-medium">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700 text-brandBlue">Práctica Profesional I</td> <td class="p-5 text-center text-brandBlue text-sm italic font-bold">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Seguridad I</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">1° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Dibujo Técnico</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">1° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Seguridad II</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">2° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Informática I</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">2° Cuatrimestre</td> </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="mb-20">
+            <h3 class="text-2xl font-black text-brandBlue mb-8 flex items-center gap-3">
+                <span class="bg-brandBlue text-white w-10 h-10 rounded-xl flex items-center justify-center text-sm shadow-lg">02</span>
+                SEGUNDO AÑO
+            </h3>
+            <div class="overflow-hidden rounded-3xl shadow-xl bg-white border border-slate-100">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="table-gradient-header text-white">
+                            <th class="p-5 font-bold uppercase text-xs tracking-widest">Materia</th>
+                            <th class="p-5 font-bold uppercase text-xs tracking-widest text-center">Cursado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr> <td class="p-5 font-bold text-slate-700">Problemática Filosófica</td> <td class="p-5 text-center text-slate-500 text-sm italic font-medium">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Medicina del Trabajo</td> <td class="p-5 text-center text-slate-500 text-sm italic font-medium">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Higiene Industrial</td> <td class="p-5 text-center text-slate-500 text-sm italic font-medium">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Inglés Técnico I</td> <td class="p-5 text-center text-slate-500 text-sm italic font-medium">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700 text-brandBlue">Práctica Profesional II</td> <td class="p-5 text-center text-brandBlue text-sm italic font-bold">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Seguridad III</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">1° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Informática II</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">1° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Seguridad IV</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">2° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Organización Industrial</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">2° Cuatrimestre</td> </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="mb-20">
+            <h3 class="text-2xl font-black text-brandBlue mb-8 flex items-center gap-3">
+                <span class="bg-brandBlue text-white w-10 h-10 rounded-xl flex items-center justify-center text-sm shadow-lg">03</span>
+                TERCER AÑO
+            </h3>
+            <div class="overflow-hidden rounded-3xl shadow-xl bg-white border border-slate-100">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="table-gradient-header text-white">
+                            <th class="p-5 font-bold uppercase text-xs tracking-widest">Materia</th>
+                            <th class="p-5 font-bold uppercase text-xs tracking-widest text-center">Cursado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr> <td class="p-5 font-bold text-slate-700">Inglés Técnico II</td> <td class="p-5 text-center text-slate-500 text-sm italic font-medium">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700 text-brandBlue">Práctica Profesional III</td> <td class="p-5 text-center text-brandBlue text-sm italic font-bold">Anual</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Ergonomía</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">1° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Psicología Laboral</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">1° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Sociedad y Trabajo</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">1° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Estudio del Trabajo</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">1° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Seguridad V</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">1° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Gestión y Auditoría Ambiental</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">2° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Capacitación y Selección de Personal</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">2° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Derecho del Trabajo y Relaciones Laborales</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">2° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Ética y Deontología Profesional</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">2° Cuatrimestre</td> </tr>
+                        <tr> <td class="p-5 font-bold text-slate-700">Seguridad VI</td> <td class="p-5 text-center text-slate-500 text-sm font-semibold">2° Cuatrimestre</td> </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-brandBg border-2 border-brandBlue rounded-[40px] p-10 md:p-16 text-center shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-6 -right-6 text-brandOrange/10">
+                    <i data-lucide="clock" size="120"></i>
+                </div>
+                
+                <h2 class="text-3xl md:text-4xl font-black text-brandBlue uppercase mb-8 tracking-tight">Horarios de Cursado</h2>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+                    <div class="flex flex-col items-center">
+                        <span class="text-brandOrange font-bold uppercase tracking-widest text-xs mb-2">Días</span>
+                        <p class="text-2xl font-extrabold text-slate-700 uppercase">Lunes a viernes</p>
+                    </div>
+                    <div class="hidden md:block w-px h-16 bg-slate-300"></div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-brandOrange font-bold uppercase tracking-widest text-xs mb-2">Franja Horaria</span>
+                        <p class="text-2xl font-extrabold text-slate-700">18:30 hs. a 23 hs.</p>
+                    </div>
+                </div>
+                
+                <p class="mt-10 text-slate-500 text-sm font-medium italic">
+                    * El cursado se desarrolla bajo modalidad híbrida según cronograma institucional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-400 text-[10px] uppercase tracking-[0.3em] font-bold border-t border-slate-100 bg-white">
+        © 2026 Instituto Jerárquicos Santa Fe | Seguridad e Higiene
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
