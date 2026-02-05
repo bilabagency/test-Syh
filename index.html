@@ -9,6 +9,21 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '886518037420320');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=886518037420320&ev=PageView&noscript=1"
+    /></noscript>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -150,7 +165,7 @@
                     <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:bg-brandOrange">
                         <i data-lucide="monitor" class="text-brandOrange group-hover:text-white float-icon"></i>
                     </div>
-                    <h4 class="text-white group-hover:text-brandBlue font-extrabold text-sm uppercase leading-tight">Cursado Flexible (Mixto)</h4>
+                    <h4 class="text-white group-hover:text-brandBlue font-extrabold text-sm uppercase leading-tight">Cursado Híbrido</h4>
                 </div>
                 <div class="glass-card-dark p-8 rounded-[40px] text-center group hover:bg-white hover:scale-105 transition-all duration-500">
                     <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:bg-brandOrange">
@@ -179,7 +194,16 @@
             <div class="video-container shadow-2xl border-4 border-brandBg mb-12">
                 <iframe id="success-video" src="https://player.vimeo.com/video/1160789146?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen" title="video muestra"></iframe>
             </div>
-            <button onclick="scrollToId('contacto')" class="bg-brandOrange text-white font-extrabold py-4 px-10 rounded-full shadow-xl hover:scale-105 transition-all uppercase text-sm">Hablar con un asesor ahora</button>
+            
+            <div class="mb-12">
+                <button onclick="scrollToId('contacto')" class="bg-brandOrange text-white font-extrabold py-4 px-10 rounded-full shadow-xl hover:scale-105 transition-all uppercase text-sm">Hablar con un asesor ahora</button>
+            </div>
+
+            <div class="mt-8 p-8 bg-brandBg rounded-[40px] border-2 border-slate-100 inline-block shadow-sm">
+                <p class="text-brandBlue font-bold uppercase tracking-widest text-xs mb-3">Horario de cursada</p>
+                <p class="text-slate-700 font-extrabold text-xl md:text-2xl mb-1">Lunes a viernes</p>
+                <p class="text-brandOrange font-black text-2xl md:text-3xl">de 18:30 hs. a 23 hs.</p>
+            </div>
         </div>
     </section>
 
@@ -225,16 +249,19 @@
     </section>
 
     <div id="popup" class="hidden fixed inset-0 bg-slate-900/80 backdrop-blur-md z-[100] flex items-center justify-center px-4 overflow-y-auto">
-        <div class="bg-brandBlue p-8 md:p-12 rounded-[40px] max-w-xl w-full relative shadow-2xl text-white">
+        <div class="bg-brandBlue p-8 md:p-12 rounded-[40px] max-w-xl w-full relative shadow-2xl text-white my-8">
             <button onclick="togglePopup(false)" class="absolute top-6 right-6 text-white/50 hover:text-white"><i data-lucide="x-circle"></i></button>
             <div class="text-center mb-8">
                 <h3 class="text-2xl font-extrabold uppercase">Descargar Programa</h3>
-                <p class="text-brandOrange italic text-sm mt-2 font-semibold">✨ Recibí el PDF y hablá con un asesor especializado.</p>
+                <p class="text-brandOrange italic text-sm mt-2 font-semibold">✨ Completá tus datos y recibí el programa detallado.</p>
             </div>
-            <form onsubmit="handleSubmit(event, '23f87074-4298-4331-81e4-7cb41853ac05', 'Descarga Programa')" class="space-y-4">
-                <input type="text" name="full_name" placeholder="Nombre completo" class="w-full p-4 rounded-2xl bg-white/10 border border-white/20 outline-none focus:bg-white focus:text-slate-800 transition-all text-white" required>
+            <form onsubmit="handleSubmit(event, 'e2ee417c-d6d9-4254-aebc-e2f63f90ecfe', 'Descarga Programa')" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="first_name" placeholder="Nombre" class="w-full p-4 rounded-2xl bg-white/10 border border-white/20 outline-none focus:bg-white focus:text-slate-800 transition-all text-white" required>
+                    <input type="text" name="last_name" placeholder="Apellido" class="w-full p-4 rounded-2xl bg-white/10 border border-white/20 outline-none focus:bg-white focus:text-slate-800 transition-all text-white" required>
+                </div>
                 <input type="email" name="email" placeholder="Correo Electrónico" class="w-full p-4 rounded-2xl bg-white/10 border border-white/20 outline-none focus:bg-white focus:text-slate-800 transition-all text-white" required>
-                <input type="tel" name="phone" placeholder="Celular" class="w-full p-4 rounded-2xl bg-white/10 border border-white/20 outline-none focus:bg-white focus:text-slate-800 transition-all text-white" required>
+                <input type="tel" name="phone" placeholder="Celular (Ej: 342 4123456)" class="w-full p-4 rounded-2xl bg-white/10 border border-white/20 outline-none focus:bg-white focus:text-slate-800 transition-all text-white" required>
                 
                 <div class="bg-white/5 p-5 rounded-2xl border border-white/20 flex flex-col gap-3">
                     <div class="flex items-center gap-2 text-brandOrange"><i data-lucide="shield-check" size="18"></i><span class="text-xs font-bold uppercase tracking-widest">Seguridad</span></div>
@@ -244,7 +271,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="w-full bg-brandOrange text-white font-extrabold py-5 rounded-2xl shadow-xl uppercase">Descargar programa ahora</button>
+                <button type="submit" class="w-full bg-brandOrange text-white font-extrabold py-5 rounded-2xl shadow-xl uppercase tracking-wide">Descargar programa ahora</button>
             </form>
         </div>
     </div>
@@ -300,8 +327,8 @@
             const webhookUrl = `https://services.leadconnectorhq.com/hooks/h9UGYG3IwsHJd47SoPsD/webhook-trigger/${triggerId}`;
 
             const data = {
-                firstName: form.querySelector('[name="first_name"]')?.value || form.querySelector('[name="full_name"]')?.value.split(' ')[0],
-                lastName: form.querySelector('[name="last_name"]')?.value || form.querySelector('[name="full_name"]')?.value.split(' ').slice(1).join(' '),
+                firstName: form.querySelector('[name="first_name"]').value,
+                lastName: form.querySelector('[name="last_name"]').value,
                 email: form.querySelector('[name="email"]').value,
                 phone: phoneClean,
                 source: 'Landing Seguridad e Higiene 2026',
@@ -319,12 +346,11 @@
                     body: JSON.stringify(data)
                 });
 
-                alert('¡Excelente! Recibimos tus datos. Un asesor te contactará por WhatsApp en menos de 5 minutos.');
-                form.reset();
-                updateCaptchas();
-                if (type === 'Descarga Programa') togglePopup(false);
+                // Redirección inmediata a programa.html tras el éxito del webhook
+                window.location.href = 'programa.html';
+                
             } catch (err) {
-                alert('Hubo un error. Por favor, intentá nuevamente.');
+                alert('Hubo un error al procesar tu solicitud. Por favor, intentá nuevamente.');
             } finally {
                 btn.innerText = originalText;
                 btn.disabled = false;
